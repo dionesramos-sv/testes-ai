@@ -1,0 +1,740 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>E-book Google Core Update e SEO na Era da IA | Studio Visual</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Montserrat:wght@700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="assets/css/styles.css">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: {
+                            50: '#E6F1FF',
+                            100: '#CCE3FF',
+                            200: '#99C7FF',
+                            300: '#76A3FF',
+                            400: '#356BFF',
+                            500: '#0A46EA',
+                            600: '#0077FE',
+                            700: '#4523C2',
+                            800: '#000B52',
+                            900: '#001478',
+                        },
+                        gray: {
+                            50: '#F0F4F8',
+                            100: '#E9EDF2',
+                            200: '#D1D9E6',
+                            300: '#A0AEC0',
+                            400: '#646E82',
+                            500: '#454F62',
+                            600: '#2E3646',
+                            700: '#252B37',
+                            800: '#1A1F2C',
+                            900: '#0F1219',
+                        },
+                        accent: {
+                            red: '#FF6D63',
+                            purple: '#5E1CFE',
+                        }
+                    },
+                    fontFamily: {
+                        'inter': ['Inter', 'sans-serif'],
+                    },
+                    animation: {
+                        'fade-in': 'fadeIn 0.8s ease-out forwards',
+                        'fade-in-up': 'fadeInUp 0.8s ease-out forwards',
+                        'fade-in-left': 'fadeInLeft 0.8s ease-out forwards',
+                        'fade-in-right': 'fadeInRight 0.8s ease-out forwards',
+                        'scale-in': 'scaleIn 0.6s ease-out forwards',
+                        'slide-up': 'slideUp 0.6s ease-out forwards',
+                        'float': 'float 6s ease-in-out infinite',
+                        'pulse-glow': 'pulseGlow 2s ease-in-out infinite',
+                        'marquee': 'marquee 30s linear infinite',
+                    },
+                    keyframes: {
+                        fadeIn: {
+                            '0%': { opacity: '0' },
+                            '100%': { opacity: '1' },
+                        },
+                        fadeInUp: {
+                            '0%': { opacity: '0', transform: 'translateY(30px)' },
+                            '100%': { opacity: '1', transform: 'translateY(0)' },
+                        },
+                        fadeInLeft: {
+                            '0%': { opacity: '0', transform: 'translateX(-30px)' },
+                            '100%': { opacity: '1', transform: 'translateX(0)' },
+                        },
+                        fadeInRight: {
+                            '0%': { opacity: '0', transform: 'translateX(30px)' },
+                            '100%': { opacity: '1', transform: 'translateX(0)' },
+                        },
+                        scaleIn: {
+                            '0%': { opacity: '0', transform: 'scale(0.9)' },
+                            '100%': { opacity: '1', transform: 'scale(1)' },
+                        },
+                        slideUp: {
+                            '0%': { opacity: '0', transform: 'translateY(100%)' },
+                            '100%': { opacity: '1', transform: 'translateY(0)' },
+                        },
+                        float: {
+                            '0%, 100%': { transform: 'translateY(0)' },
+                            '50%': { transform: 'translateY(-20px)' },
+                        },
+                        pulseGlow: {
+                            '0%, 100%': { boxShadow: '0 0 20px rgba(10, 70, 234, 0.3)' },
+                            '50%': { boxShadow: '0 0 40px rgba(10, 70, 234, 0.6)' },
+                        },
+                        marquee: {
+                            '0%': { transform: 'translateX(0)' },
+                            '100%': { transform: 'translateX(-50%)' },
+                        },
+                    },
+                },
+            },
+        }
+    </script>
+    <style>
+        .bg-gradient-hero {
+            background: linear-gradient(-45deg, #000B52 0%, #001478 23%, #0A46EA 72%, #4523C2 100%);
+        }
+        .bg-gradient-overlay {
+            background: linear-gradient(-45deg,
+                rgba(7, 60, 206, 0.9) 0%,
+                rgba(7, 60, 206, 0.6) 8%,
+                rgba(7, 60, 206, 0) 19%,
+                rgba(0, 0, 0, 0.02) 31%,
+                rgba(0, 0, 0, 0) 39%,
+                rgba(0, 0, 0, 0.7) 47%,
+                rgba(0, 0, 0, 0.5) 60%,
+                rgba(0, 0, 0, 0.6) 74%,
+                rgba(0, 0, 0, 0.7) 81%,
+                rgba(7, 60, 206, 1) 100%
+            );
+        }
+        .bg-gradient-cta {
+            background: linear-gradient(135deg, #002ec4 0%, #30c9e4 52%, #316df7 100%);
+        }
+        .bg-gradient-btn {
+            background: linear-gradient(180deg, rgba(10, 70, 234, 1) 0%, rgba(0, 20, 120, 1) 100%);
+        }
+        .shadow-cta {
+            box-shadow: 0px 0px 50px 0px rgba(34, 27, 232, 0.7);
+        }
+        .bg-gradient-text {
+            background: linear-gradient(90deg, #000000 0%, #0A46EA 50%, #4523C2 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+        .backdrop-blur-badge {
+            backdrop-filter: blur(24px);
+            -webkit-backdrop-filter: blur(24px);
+        }
+        .font-montserrat {
+            font-family: 'Montserrat', sans-serif;
+        }
+        .bg-gradient-benefit {
+            background: linear-gradient(180deg, rgba(94, 28, 254, 1) 0%, rgba(0, 119, 255, 1) 73%, rgba(0, 149, 255, 1) 100%);
+        }
+        .shadow-benefit {
+            box-shadow: 0px 2px 5px 0px rgba(0, 145, 255, 0.29),
+                        0px 9px 9px 0px rgba(0, 145, 255, 0.26),
+                        0px 21px 12px 0px rgba(0, 145, 255, 0.15),
+                        0px 37px 15px 0px rgba(0, 145, 255, 0.04),
+                        0px 58px 16px 0px rgba(0, 145, 255, 0.01);
+        }
+        .bg-gradient-form {
+            background:
+                linear-gradient(135deg, rgba(0, 0, 0, 0.8) 0%, rgba(0, 0, 0, 0.8) 100%),
+                linear-gradient(135deg, #6518ff 0%, #0a46ea 30%, #316df7 60%, #002ec4 100%);
+        }
+        .animate-on-scroll {
+            opacity: 1;
+        }
+        .animate-on-scroll.will-animate {
+            opacity: 0;
+        }
+        .animate-on-scroll.animated {
+            opacity: 1;
+        }
+        .btn-glow {
+            box-shadow: 0 0 20px rgba(10, 70, 234, 0.4);
+            transition: all 0.3s ease;
+        }
+        .btn-glow:hover {
+            box-shadow: 0 0 40px rgba(10, 70, 234, 0.6);
+            transform: translateY(-2px);
+        }
+        .card-shadow {
+            box-shadow: 0 25px 50px -10px rgba(0, 0, 0, 0.1);
+        }
+        .card-shadow-blue {
+            box-shadow: 0 25px 50px -10px rgba(118, 163, 255, 0.1);
+        }
+        .marquee-container {
+            overflow: hidden;
+            white-space: nowrap;
+        }
+        .marquee-content {
+            display: inline-flex;
+            animation: marquee 30s linear infinite;
+            flex-shrink: 0;
+        }
+        .marquee-content > div {
+            flex-shrink: 0;
+        }
+        .marquee-content:hover {
+            animation-play-state: paused;
+        }
+        @keyframes marquee {
+            0% {
+                transform: translateX(0);
+            }
+            100% {
+                transform: translateX(-50%);
+            }
+        }
+        .icon-gradient {
+            background: linear-gradient(135deg, #0A46EA 0%, #4523C2 100%);
+        }
+        input[type="text"]:focus,
+        input[type="email"]:focus,
+        input[type="tel"]:focus {
+            outline: none;
+            border-color: #0A46EA;
+            box-shadow: 0 0 0 2px rgba(10, 70, 234, 0.2);
+        }
+        input[type="checkbox"] {
+            appearance: none;
+            -webkit-appearance: none;
+            cursor: pointer;
+        }
+        input[type="checkbox"]:checked {
+            background-color: white;
+            background-image: url("data:image/svg+xml,%3csvg viewBox='0 0 16 16' fill='%230A46EA' xmlns='http://www.w3.org/2000/svg'%3e%3cpath d='M12.207 4.793a1 1 0 010 1.414l-5 5a1 1 0 01-1.414 0l-2-2a1 1 0 011.414-1.414L6.5 9.086l4.293-4.293a1 1 0 011.414 0z'/%3e%3c/svg%3e");
+            background-size: 100% 100%;
+            background-position: center;
+            background-repeat: no-repeat;
+        }
+    </style>
+</head>
+<body class="font-inter bg-primary-50 text-gray-700 overflow-x-hidden">
+    <!-- Hero Section -->
+    <section class="bg-primary-50">
+        <div class="container mx-auto px-2 pt-2 pb-1">
+            <!-- Hero Card -->
+            <div class="relative rounded-lg overflow-hidden bg-black">
+                <!-- Background Image -->
+                <img src="assets/images/header-bg.png" alt="Background" class="absolute inset-0 w-full h-full object-cover">
+
+                <!-- Gradient Overlay -->
+                <div class="absolute inset-0 bg-gradient-overlay"></div>
+
+                <!-- Content Container -->
+                <div class="relative z-10 px-4 md:px-8 lg:px-16 pt-8 lg:pt-10 pb-16 lg:pb-24 flex flex-col gap-8 lg:gap-10">
+                    <!-- Logo -->
+                    <div class="animate-on-scroll" data-animation="fade-in">
+                        <img src="assets/images/studio-logo.png" alt="Studio Visual" class="h-10 lg:h-12 w-auto">
+                    </div>
+
+                    <!-- Text Content -->
+                    <div class="flex flex-col gap-16 max-w-[44rem]">
+                        <div class="flex flex-col gap-4 animate-on-scroll" data-animation="fade-in-up">
+                            <!-- Badge -->
+                            <div class="inline-flex">
+                                <span class="px-3 py-1 rounded-md bg-white/10 backdrop-blur-badge border border-white/5 text-white text-sm font-normal uppercase tracking-[0.14em]">
+                                    e-book
+                                </span>
+                            </div>
+
+                            <!-- Title -->
+                            <h1 class="text-4xl lg:text-6xl font-bold text-white leading-[1.2] font-montserrat">
+                                Google Core Update e o SEO na Era da Inteligência Artificial
+                            </h1>
+                        </div>
+
+                        <!-- Descriptions -->
+                        <div class="flex flex-col gap-4 animate-on-scroll" data-animation="fade-in-up" data-delay="100">
+                            <p class="text-base lg:text-lg font-bold text-white">
+                                Descubra como o novo algoritmo está mudando as regras do jogo e o que sua empresa precisa fazer para continuar relevante no Google.
+                            </p>
+                            <p class="text-base lg:text-lg text-white font-normal">
+                                O tráfego orgânico mudou. A busca e a Inteligência Artificial já respondem antes do clique — e só os sites que entregam valor para seu público sobrevivem.
+                            </p>
+                        </div>
+                    </div>
+
+                    <!-- CTA Button -->
+                    <div class="animate-on-scroll" data-animation="fade-in-up" data-delay="200">
+                        <div class="inline-block p-0.5 rounded-[10px] bg-gradient-cta shadow-cta">
+                            <a href="#form" class="inline-flex items-center justify-center px-7 py-5 bg-gradient-btn text-white text-xl font-medium rounded-lg border border-primary-500 transition-all duration-300 hover:opacity-90">
+                                Baixe gratuitamente o e-book
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Benefits & Form Section -->
+    <section id="form" class="bg-primary-50 py-1 overflow-visible">
+        <div class="container mx-auto px-2 overflow-visible">
+            <!-- Main White Card -->
+            <div class="bg-white rounded-lg border border-[#C6DDFF] shadow-sm overflow-visible relative">
+                <!-- Content Wrapper with padding -->
+                <div class="pt-12 lg:pt-20 px-4 md:px-8 lg:px-16 pb-0">
+                    <!-- Container for Benefits + Form with inner padding -->
+                    <div class="px-8 lg:px-16 pb-16">
+                        <!-- Benefits Area -->
+                        <div>
+                            <!-- Benefits Header -->
+                            <div class="text-center mb-12 animate-on-scroll" data-animation="fade-in-up">
+                                <span class="inline-block px-3 py-1 rounded-md bg-primary-50 border border-[#9EC1FF] text-primary-500 text-sm font-normal uppercase tracking-[0.14em] mb-4">
+                                    Benefícios
+                                </span>
+                                <h2 class="text-3xl lg:text-5xl font-bold text-gray-700 mb-4 font-montserrat max-w-[704px] mx-auto">
+                                    Prepare seu site para as mudanças do <span style="background: linear-gradient(90deg, #0A46EA 0%, #4523C2 100%); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text;">Google e IA</span>
+                                </h2>
+                                <p class="text-lg text-gray-500 font-medium">
+                                    Aprenda como adaptar seu site às novas regras do Google e tendências de IA para ganhar relevância e resultados no SEO.
+                                </p>
+                            </div>
+
+                            <!-- Benefits Grid - Horizontal Row -->
+                            <div class="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-5 gap-6 lg:gap-8 mb-12">
+                        <!-- Benefit 1 -->
+                        <div class="flex flex-col items-center text-center animate-on-scroll" data-animation="fade-in-up" data-delay="100">
+                            <div class="w-[104px] h-[104px] -mb-6 flex items-center justify-center overflow-visible">
+                                <img src="assets/images/icon-check.svg" alt="Impacto" class="w-28 h-auto object-contain -mt-2">
+                            </div>
+                            <h3 class="text-base font-bold text-gray-700 mb-2 font-montserrat leading-tight">Impacto da Core Update nos sites</h3>
+                            <p class="text-gray-500 text-sm">Por que 90% dos sites perderam visibilidade no último Core Update</p>
+                        </div>
+
+                        <!-- Benefit 2 -->
+                        <div class="flex flex-col items-center text-center animate-on-scroll" data-animation="fade-in-up" data-delay="200">
+                            <div class="w-[104px] h-[104px] -mb-6 flex items-center justify-center overflow-visible">
+                                <img src="assets/images/icon-check-2.svg" alt="Buscas" class="w-28 h-auto object-contain -mt-2">
+                            </div>
+                            <h3 class="text-base font-bold text-gray-700 mb-2 font-montserrat leading-tight">Mudança nas buscas digitais</h3>
+                            <p class="text-gray-500 text-sm">Como a IA generativa está mudando 60% das buscas na internet</p>
+                        </div>
+
+                        <!-- Benefit 3 -->
+                        <div class="flex flex-col items-center text-center animate-on-scroll" data-animation="fade-in-up" data-delay="300">
+                            <div class="w-[104px] h-[104px] -mb-6 flex items-center justify-center overflow-visible">
+                                <img src="assets/images/icon-check-3.svg" alt="E-E-A-T" class="w-28 h-auto object-contain -mt-2">
+                            </div>
+                            <h3 class="text-base font-bold text-gray-700 mb-2 font-montserrat leading-tight">Conceito E-E-A-T Google</h3>
+                            <p class="text-gray-500 text-sm">O que significa e como aplicá-lo em seu site</p>
+                        </div>
+
+                        <!-- Benefit 4 -->
+                        <div class="flex flex-col items-center text-center animate-on-scroll" data-animation="fade-in-up" data-delay="400">
+                            <div class="w-[104px] h-[104px] -mb-6 flex items-center justify-center overflow-visible">
+                                <img src="assets/images/icon-check-4.svg" alt="Ações" class="w-28 h-auto object-contain -mt-2">
+                            </div>
+                            <h3 class="text-base font-bold text-gray-700 mb-2 font-montserrat leading-tight">Ações para maior relevância</h3>
+                            <p class="text-gray-500 text-sm">5 ações práticas para manter relevância em meio às novas regras do Google</p>
+                        </div>
+
+                        <!-- Benefit 5 -->
+                        <div class="flex flex-col items-center text-center animate-on-scroll" data-animation="fade-in-up" data-delay="500">
+                            <div class="w-[104px] h-[104px] -mb-6 flex items-center justify-center overflow-visible">
+                                <img src="assets/images/icon-check-5.svg" alt="SEO" class="w-28 h-auto object-contain -mt-2">
+                            </div>
+                            <h3 class="text-base font-bold text-gray-700 mb-2 font-montserrat leading-tight">Futuro do SEO e algoritmos</h3>
+                            <p class="text-gray-500 text-sm">Tendências para 2026: o novo algoritmo MUVERA e o futuro do SEO</p>
+                        </div>
+                    </div>
+                </div>
+
+                        <!-- Form Area with spacing +16px (80px added from original) -->
+                        <div class="relative mt-4">
+                            <div class="flex flex-col overflow-visible">
+                                <!-- Dark Form Card -->
+                                <div class="relative overflow-visible bg-gradient-form rounded-[16px]">
+                        <!-- Gradient Overlay for light effect -->
+                        <div class="absolute inset-0 pointer-events-none" style="background: radial-gradient(ellipse 800px 600px at 0% 0%, rgba(147, 197, 253, 0.15) 0%, transparent 50%);"></div>
+
+                        <!-- E-book Mockup Image (Right Side) -->
+                        <div class="absolute right-8 lg:right-4 top-[-44px] lg:top-[-60px] w-[420px] lg:w-[680px] hidden lg:block z-30 pointer-events-none" style="transform-origin: center center; transform: rotate(360deg) scale(1);">
+                            <img src="assets/images/ebook-mockup-6f350f.png" alt="E-book Mockup" class="w-full h-auto object-contain" style="filter: drop-shadow(0 25px 50px rgba(0, 0, 0, 0.5));">
+                        </div>
+
+                        <!-- Form Content -->
+                        <div class="relative z-10 pt-12 pb-16 px-4 md:px-8 lg:px-16 lg:pr-[50%] flex flex-col gap-10">
+                            <h2 class="text-2xl lg:text-[40px] text-white font-montserrat font-bold leading-[1.2] animate-on-scroll" data-animation="fade-in-up">
+                                <span class="italic">Baixe agora o e-book gratuito</span> <span class="font-normal">e prepare seu site para o futuro da busca</span>
+                            </h2>
+
+                            <!-- Form -->
+                            <form class="flex flex-col gap-8 animate-on-scroll" data-animation="fade-in-up" data-delay="200">
+                                <!-- Form Fields -->
+                                <div class="flex flex-col gap-6">
+                                    <!-- Full Name -->
+                                    <div class="flex flex-col gap-2">
+                                        <label class="flex items-center gap-1.5 text-white text-base font-normal">
+                                            Nome completo <span class="text-accent-red">*</span>
+                                        </label>
+                                        <input type="text" placeholder="Digite seu nome completo" required
+                                            class="w-full px-3 h-12 bg-[#F0F4F8] border border-[#C2C9D4] rounded-lg text-gray-700 placeholder-[#646E82] text-base transition-all duration-300 focus:outline-none focus:border-primary-500 focus:ring-2 focus:ring-primary-500/20">
+                                    </div>
+
+                                    <!-- Email and WhatsApp -->
+                                    <div class="grid md:grid-cols-2 gap-6">
+                                        <div class="flex flex-col gap-2">
+                                            <label class="flex items-center gap-1.5 text-white text-base font-normal">
+                                                E-mail <span class="text-accent-red">*</span>
+                                            </label>
+                                            <input type="email" placeholder="Digite seu e-mail" required
+                                                class="w-full px-3 h-12 bg-[#F0F4F8] border border-[#C2C9D4] rounded-lg text-gray-700 placeholder-[#646E82] text-base transition-all duration-300 focus:outline-none focus:border-primary-500 focus:ring-2 focus:ring-primary-500/20">
+                                        </div>
+                                        <div class="flex flex-col gap-2">
+                                            <label class="flex items-center gap-1.5 text-white text-base font-normal">
+                                                WhatsApp <span class="text-accent-red">*</span>
+                                            </label>
+                                            <input type="tel" placeholder="+55 (11) 00000-0000" required
+                                                class="w-full px-3 h-12 bg-[#F0F4F8] border border-[#C2C9D4] rounded-lg text-gray-700 placeholder-[#646E82] text-base transition-all duration-300 focus:outline-none focus:border-primary-500 focus:ring-2 focus:ring-primary-500/20">
+                                        </div>
+                                    </div>
+
+                                    <!-- Cargo and Empresa -->
+                                    <div class="grid md:grid-cols-2 gap-6">
+                                        <div class="flex flex-col gap-2">
+                                            <label class="flex items-center gap-1.5 text-white text-base font-normal">
+                                                Cargo <span class="text-accent-red">*</span>
+                                            </label>
+                                            <input type="text" placeholder="Digite seu cargo" required
+                                                class="w-full px-3 h-12 bg-[#F0F4F8] border border-[#C2C9D4] rounded-lg text-gray-700 placeholder-[#646E82] text-base transition-all duration-300 focus:outline-none focus:border-primary-500 focus:ring-2 focus:ring-primary-500/20">
+                                        </div>
+                                        <div class="flex flex-col gap-2">
+                                            <label class="flex items-center gap-1.5 text-white text-base font-normal">
+                                                Empresa <span class="text-accent-red">*</span>
+                                            </label>
+                                            <input type="text" placeholder="Digite sua empresa" required
+                                                class="w-full px-3 h-12 bg-[#F0F4F8] border border-[#C2C9D4] rounded-lg text-gray-700 placeholder-[#646E82] text-base transition-all duration-300 focus:outline-none focus:border-primary-500 focus:ring-2 focus:ring-primary-500/20">
+                                        </div>
+                                    </div>
+
+                                    <!-- Privacy Checkbox -->
+                                    <div class="flex items-start gap-3 mt-2">
+                                        <input type="checkbox" id="privacy" required class="w-6 h-6 mt-0.5 rounded-lg border border-[#C2C9D4] bg-white checked:bg-white checked:border-[#C2C9D4] focus:ring-2 focus:ring-white/50 cursor-pointer flex-shrink-0">
+                                        <label for="privacy" class="text-white text-base cursor-pointer leading-relaxed">
+                                            Você concorda com nossa <a href="#" class="underline hover:text-primary-200 transition-colors">Política de Privacidade</a>.
+                                        </label>
+                                    </div>
+                                </div>
+
+                                <!-- Submit Button -->
+                                <div class="p-0.5 rounded-[10px] bg-gradient-cta shadow-cta">
+                                    <button type="submit"
+                                        class="w-full px-7 py-5 bg-gradient-btn text-white text-[20px] font-medium rounded-lg border border-[#0a46ea] transition-all duration-300 hover:opacity-90 hover:shadow-lg">
+                                        Baixar agora
+                                    </button>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Sobre a Studio Section -->
+    <section class="py-2 bg-primary-50">
+        <div class="container mx-auto px-2">
+            <!-- Main White Card -->
+            <div class="bg-white rounded-lg border border-[#C6DDFF] shadow-sm overflow-visible relative">
+
+                <!-- Logo S Background -->
+                <div class="absolute left-0 top-0 w-full h-auto pointer-events-none">
+                    <img src="assets/images/studio-s-logo.png" alt="" class="w-full h-auto object-contain">
+                </div>
+
+                <!-- Decorative Circles -->
+                <div class="absolute right-[56px] top-[257px] w-[281px] h-[281px] rounded-full bg-[#5E1CFE] opacity-10 blur-3xl pointer-events-none"></div>
+                <div class="absolute right-[186px] top-[510px] w-[281px] h-[281px] rounded-full bg-[#346AFF] opacity-10 blur-3xl pointer-events-none"></div>
+                <div class="absolute right-[323px] top-[233px] w-[281px] h-[281px] rounded-full bg-[#346AFF] opacity-10 blur-3xl pointer-events-none"></div>
+
+                <!-- Content -->
+                <div class="relative z-10 pt-12 lg:pt-20 px-4 md:px-8 lg:px-16 pb-8 lg:pb-12">
+                    <!-- Top Section: Sobre a Studio -->
+                    <div class="flex flex-col gap-8 max-w-[543px] mb-64 animate-on-scroll" data-animation="fade-in-up">
+                        <!-- Badge -->
+                        <div class="inline-flex">
+                            <span class="px-4 py-1.5 rounded-md bg-primary-50 border border-[#9EC1FF] text-primary-500 text-sm font-normal uppercase tracking-[0.14em]">
+                                Sobre a Studio
+                            </span>
+                        </div>
+
+                        <!-- Main Title -->
+                        <h2 class="text-3xl lg:text-[48px] font-bold text-gray-700 font-montserrat leading-tight">
+                            A Studio Visual é especialista em soluções digitais:
+                        </h2>
+
+                        <!-- Blue Gradient Text -->
+                        <h3 class="text-2xl lg:text-[40px] font-bold font-montserrat leading-tight" style="background: linear-gradient(90deg, #000000 0%, #0A46EA 50%, #4523C2 100%); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text;">
+                            WordPress, SEO e performance digital.
+                        </h3>
+
+                        <!-- Description -->
+                        <p class="text-lg lg:text-xl text-gray-700 font-medium leading-relaxed">
+                            Já ajudamos dezenas de empresas a estruturarem sites otimizados para os algoritmos mais recentes do Google.
+                        </p>
+                    </div>
+
+                    <!-- Logos Carousel -->
+                    <div class="mb-16 lg:mb-24">
+                        <div class="marquee-container">
+                            <div class="marquee-content">
+                                <!-- First set of logos -->
+                                <div class="flex items-center gap-32 lg:gap-[180px] px-8">
+                                    <img src="assets/images/logo-direcional.svg" alt="Direcional" class="h-8">
+                                    <img src="assets/images/logo-faber-castell.svg" alt="Faber-Castell" class="h-10">
+                                    <img src="assets/images/logo-tooseguros.svg" alt="Too Seguros" class="h-10">
+                                    <img src="assets/images/logo-serasa.svg" alt="Serasa" class="h-12">
+                                    <img src="assets/images/logo-riva.svg" alt="Riva" class="h-8">
+                                    <img src="assets/images/logo-olx.svg" alt="OLX" class="h-10">
+                                    <img src="assets/images/logo-roche.svg" alt="Roche" class="h-10">
+                                    <img src="assets/images/logo-site.svg" alt="Site" class="h-8">
+                                </div>
+                                <!-- Duplicate for seamless loop -->
+                                <div class="flex items-center gap-32 lg:gap-[180px] px-8">
+                                    <img src="assets/images/logo-direcional.svg" alt="Direcional" class="h-8">
+                                    <img src="assets/images/logo-faber-castell.svg" alt="Faber-Castell" class="h-10">
+                                    <img src="assets/images/logo-tooseguros.svg" alt="Too Seguros" class="h-10">
+                                    <img src="assets/images/logo-serasa.svg" alt="Serasa" class="h-12">
+                                    <img src="assets/images/logo-riva.svg" alt="Riva" class="h-8">
+                                    <img src="assets/images/logo-olx.svg" alt="OLX" class="h-10">
+                                    <img src="assets/images/logo-roche.svg" alt="Roche" class="h-10">
+                                    <img src="assets/images/logo-site.svg" alt="Site" class="h-8">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Container for Robot + CTA Sections with padding -->
+                    <div class="px-8 lg:px-16 pb-16 border rounded-2xl bg-white" style="border-color: #E9EDF2; box-shadow: 0 25px 50px -10px rgba(118, 163, 255, 0.10);">
+                        <!-- "O que você tem a ver com isso?" Section -->
+                        <div class="bg-white rounded-lg px-8 animate-on-scroll" data-animation="fade-in-up">
+                            <div class="flex flex-col lg:flex-row gap-4 items-center lg:items-center">
+                                <!-- Left Column: Text (680px width) -->
+                                <div class="flex flex-col gap-6 w-full lg:w-[680px] flex-shrink-0">
+                                    <h3 class="text-2xl lg:text-[40px] font-bold font-montserrat leading-tight" style="background: linear-gradient(90deg, #000000 0%, #0A46EA 50%, #4523C2 100%); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text;">
+                                        O que você tem a ver com isso?
+                                    </h3>
+
+                                    <p class="text-lg lg:text-xl text-black font-bold">
+                                        Se a sua empresa tem site, blog ou e-commerce, você está no jogo.
+                                    </p>
+
+                                    <p class="text-base lg:text-lg text-gray-500 font-medium">
+                                        O comportamento de busca mudou: se você não se adaptar, pode desaparecer da primeira página sem aviso.
+                                    </p>
+
+                                    <p class="text-lg lg:text-xl text-black font-bold">
+                                        Este e-book mostra o caminho para se tornar a fonte das respostas, não apenas mais um link na SERP.
+                                    </p>
+                                </div>
+
+                                <!-- Right Column: Robot Image (327px width) -->
+                                <div class="w-[240px] lg:w-[327px] flex-shrink-0 animate-on-scroll" data-animation="fade-in-right">
+                                    <img src="assets/images/robot-question.png" alt="Robot Question" class="w-full h-auto object-contain">
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Final CTA with Gradient Background (overlap -64px) -->
+                        <div class="relative -mt-16">
+                            <!-- Gradient Card -->
+                            <div class="relative rounded-[16px] overflow-visible" style="background: linear-gradient(135deg, #000B52 0%, #001478 23.08%, #0A46EA 72.12%, #4523C2 100%);">
+                                <div class="relative px-16 pt-12 pb-16">
+                                    <!-- Content Box: Image + Text -->
+                                    <div class="relative flex items-center gap-8">
+                                        <!-- E-book Image - Left (364px width, overflow top) -->
+                                        <div class="relative -mt-28 w-[364px] flex-shrink-0 z-20 animate-on-scroll" data-animation="fade-in-left">
+                                            <img src="assets/images/cta-ebook-banner.png" alt="E-book Preview" class="w-full h-auto" style="aspect-ratio: 364/439;">
+                                        </div>
+
+                                        <!-- Text Content - Right (max-width 499px) -->
+                                        <div class="flex-1 max-w-[499px] ml-auto">
+                                            <div class="flex flex-col gap-10 animate-on-scroll" data-animation="fade-in-right">
+                                                <!-- Text Block -->
+                                                <div class="flex flex-col gap-4">
+                                                    <h2 class="text-[40px] font-bold text-white font-montserrat leading-[48px]">
+                                                        Não fique para trás
+                                                    </h2>
+
+                                                    <p class="text-lg text-white leading-[27px] max-w-[431px]">
+                                                        Baixe o e-book agora e descubra como proteger sua marca e crescer no Google em 2025.
+                                                    </p>
+                                                </div>
+
+                                                <!-- CTA Button -->
+                                                <a href="#form" class="flex items-center justify-center self-start min-h-[72px] px-7 py-5 gap-2 text-white text-[20px] font-medium leading-[30px] rounded-lg border border-[#0A46EA] transition-all duration-300 hover:opacity-90" style="background: linear-gradient(180deg, #0A46EA 0%, #001478 100%); box-shadow: 0px 0px 50px 0px rgba(34, 27, 232, 0.7);">
+                                                    Quero baixar o e-book
+                                                </a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="py-2 bg-primary-50">
+        <div class="container mx-auto px-2">
+            <div class="bg-white rounded-lg border border-[#C6DDFF] shadow-sm py-8 px-4 lg:px-16">
+                <div class="flex flex-col md:flex-row justify-between items-center gap-4">
+                    <p class="text-base font-normal leading-6" style="color: #2E3646; letter-spacing: 0;">
+                        &copy; 2025 Studio Visual. Todos os direitos reservados.
+                    </p>
+                    <div class="flex items-center gap-6">
+                        <!-- Social Icons from SVG -->
+                        <img src="assets/images/social-icons.svg" alt="Redes Sociais" class="h-6">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- External JavaScript -->
+    <script src="assets/js/main.js"></script>
+
+    <!-- Inline JavaScript for Additional Features -->
+    <script>
+        // Intersection Observer for scroll animations
+        document.addEventListener('DOMContentLoaded', function() {
+            const observerOptions = {
+                root: null,
+                rootMargin: '0px',
+                threshold: 0.1
+            };
+
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        const element = entry.target;
+                        const animation = element.dataset.animation;
+                        const delay = element.dataset.delay || 0;
+
+                        setTimeout(() => {
+                            element.classList.add('animated');
+                            element.style.animation = `${animation.replace(/-/g, '')} 0.8s ease-out forwards`;
+
+                            // Map animation names to Tailwind classes
+                            if (animation === 'fade-in-up') {
+                                element.classList.add('animate-fade-in-up');
+                            } else if (animation === 'fade-in-left') {
+                                element.classList.add('animate-fade-in-left');
+                            } else if (animation === 'fade-in-right') {
+                                element.classList.add('animate-fade-in-right');
+                            } else if (animation === 'fade-in') {
+                                element.classList.add('animate-fade-in');
+                            } else if (animation === 'scale-in') {
+                                element.classList.add('animate-scale-in');
+                            }
+                        }, parseInt(delay));
+
+                        observer.unobserve(element);
+                    }
+                });
+            }, observerOptions);
+
+            // Observe all elements with animate-on-scroll class
+            document.querySelectorAll('.animate-on-scroll').forEach(el => {
+                el.classList.add('will-animate');
+                observer.observe(el);
+            });
+
+            // Smooth scroll for anchor links
+            document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+                anchor.addEventListener('click', function(e) {
+                    e.preventDefault();
+                    const target = document.querySelector(this.getAttribute('href'));
+                    if (target) {
+                        target.scrollIntoView({
+                            behavior: 'smooth',
+                            block: 'start'
+                        });
+                    }
+                });
+            });
+
+            // Phone number mask
+            const phoneInput = document.querySelector('input[type="tel"]');
+            if (phoneInput) {
+                phoneInput.addEventListener('input', function(e) {
+                    let value = e.target.value.replace(/\D/g, '');
+                    if (value.length > 0) {
+                        if (value.length <= 2) {
+                            value = '+' + value;
+                        } else if (value.length <= 4) {
+                            value = '+' + value.slice(0, 2) + ' (' + value.slice(2);
+                        } else if (value.length <= 9) {
+                            value = '+' + value.slice(0, 2) + ' (' + value.slice(2, 4) + ') ' + value.slice(4);
+                        } else {
+                            value = '+' + value.slice(0, 2) + ' (' + value.slice(2, 4) + ') ' + value.slice(4, 9) + '-' + value.slice(9, 13);
+                        }
+                    }
+                    e.target.value = value;
+                });
+            }
+
+            // Form submission
+            const form = document.querySelector('form');
+            if (form) {
+                form.addEventListener('submit', function(e) {
+                    e.preventDefault();
+
+                    // Add loading state to button
+                    const button = form.querySelector('button[type="submit"]');
+                    const originalText = button.textContent;
+                    button.textContent = 'Enviando...';
+                    button.disabled = true;
+
+                    // Simulate form submission
+                    setTimeout(() => {
+                        button.textContent = 'Enviado com sucesso!';
+                        button.classList.remove('bg-primary-500', 'hover:bg-primary-600');
+                        button.classList.add('bg-green-500');
+
+                        setTimeout(() => {
+                            button.textContent = originalText;
+                            button.classList.remove('bg-green-500');
+                            button.classList.add('bg-primary-500', 'hover:bg-primary-600');
+                            button.disabled = false;
+                            form.reset();
+                        }, 2000);
+                    }, 1500);
+                });
+            }
+        });
+
+        // Add parallax effect to hero section
+        window.addEventListener('scroll', function() {
+            const scrolled = window.pageYOffset;
+            const heroImage = document.querySelector('.animate-float');
+            if (heroImage && scrolled < 800) {
+                heroImage.style.transform = `translateY(${scrolled * 0.1}px)`;
+            }
+        });
+    </script>
+</body>
+</html>

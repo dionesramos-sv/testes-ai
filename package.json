@@ -1,0 +1,29 @@
+{
+  "name": "testes-ai",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "npx playwright test",
+    "test:ui": "npx playwright test --ui",
+    "test:report": "npx playwright show-report",
+    "test:update": "npx playwright test --update-snapshots",
+    "serve": "npx serve -l 3000"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/dionesramos-sv/testes-ai.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "bugs": {
+    "url": "https://github.com/dionesramos-sv/testes-ai/issues"
+  },
+  "homepage": "https://github.com/dionesramos-sv/testes-ai#readme",
+  "devDependencies": {
+    "@playwright/test": "^1.58.1",
+    "serve": "^14.2.5"
+  }
+}
